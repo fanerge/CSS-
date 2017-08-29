@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>css实战</title>
+<style>
+    .highlight-box {
+        /**这里用于before、after伪类定位**/
+        position: relative; 
+        width: 296px;
+        height: 374px;
+        overflow: hidden;
+    }
+    .highlight-box:before {
+        position: absolute;
+        /* 注意这里top和left，让白光移动到图片左上角，后续的划过动画也是依靠这两个属性 */
+        top: -200%;
+        left: -100%;
+        z-index: 2;
+        display: block;
+        content: '';
+        /* 定义白光的高宽，hight为300%是为了防止在移动过程中白光不够用 */
+        width: 50%;
+        height: 300%;
+        /* 使用线性渐变来实现白光 */
+        background: linear-gradient(to left top, rgba(255, 255, 255, .05) 20%, rgba(255, 255, 255, .6) 65% , rgba(255, 255, 255, .05) 100%);
+        /* background: rgba(255, 255, 255, .5); */
+        transform: rotate(45deg);
+    }
+    .highlight-box:hover:before {
+        /* 这里省略了私有前缀代码 */
+        animation: crossed .5s linear;
+    }
+
+    @keyframes crossed {
+        0% {
+            top: -200%;
+            left: -100%;
+        }
+        100% {
+            top: -50px;
+            left: 100%;
+        }
+    }
+</style> 
+</head>
+<body>
+<div class="highlight-box">
+    <img src="./img/demo.png" width="296" height="374" alt="s">
+</div>
+<script src="./js/cube.js"></script>
+</body>
+</html>

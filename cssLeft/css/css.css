@@ -1,0 +1,32 @@
+*{margin:0;padding: 0;border: none;list-style: none}
+/*********轮播左右居中*************/
+.main{
+    width: 1024px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+}
+.main a{
+    position: absolute;
+    display: block;
+    width: 1024px;
+    height: 320px;
+}
+/***********左边小图标************/
+.main ul li.selected{
+    background: #f97157;
+}
+.main ul{
+    position: absolute;
+    z-index: 999;
+    top: 120px;
+    left: 20px;
+}
+.main ul li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #909090;
+    cursor: pointer;
+    text-align: center;
+}
