@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>css实战</title>
+<style>
+.box {
+    width: 500px;
+    height: 50px;
+    float: left;
+    padding: 10px;
+    margin: 10px 20px;
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.corner {
+    background: linear-gradient(-45deg, transparent 15px, #58a 15px);
+}
+.corner1 {
+    background: linear-gradient(135deg, transparent 15px, #58a 0) top left, 
+        linear-gradient(-135deg, transparent 15px, #58a 0) top right, 
+        linear-gradient(-45deg, transparent 15px, #58a 0) bottom right,
+        linear-gradient(45deg, transparent 15px, #58a 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+.corner2 {
+    background: radial-gradient(circle at top left, transparent 15px, #58a 0) top left, 
+        radial-gradient(circle at top right, transparent 15px, #58a 0) top right, 
+        radial-gradient(circle at bottom right, transparent 15px, #58a 0) bottom right, 
+        radial-gradient(circle at bottom left, transparent 15px, #58a 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+</style>
+</head> 
+<body>
+
+<div class="box corner">单个切角</div>
+<div class="box corner1">多个切角</div>
+<div class="box corner2">多个园角</div>
+<script src="./js/cube.js"></script>
+</body>
+</html>

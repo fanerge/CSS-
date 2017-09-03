@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>css实战</title>
+<style>
+.mask, .mask-door {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}   
+.mask:before {
+    content: attr(data-title);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: .7em 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    transform: translate(0, 100%);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}  
+.mask:hover:before {
+    top: 80%;
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.mask-door {
+    position:relative;
+    width:150px;
+    height:150px;
+    overflow:hidden;
+}
+
+.mask-door:before,
+.mask-door:after {
+    position:absolute;
+    left:0;
+    width:100%;
+    opacity:0;
+    color:#fff;
+    height:50%;
+    text-align:center;
+    background:rgba(0,0,0,.5);
+    -webkit-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out;
+}
+.mask-door:before {
+    content:'';
+    top:0;
+    transform:translate(0,-100%);
+}
+.mask-door:after {
+    content:attr(data-title);
+    top:50%;
+    padding:.7em 0;
+    -webkit-transform:translate(0,100%);
+    transform:translate(0,100%);
+}
+.mask-door:hover:before,
+.mask-door:hover:after {
+    opacity:1;
+    -webkit-transform:translate(0,0);
+    transform:translate(0,0);
+}
+</style>
+</head> 
+<body>
+
+<div class="mask" data-title="遮罩条">
+    <img src="img/demo.png" alt="">
+</div>
+
+<div class="mask-door" data-title="遮罩条">
+    <img src="img/demo.png" alt="">
+</div> 
+<script src="./js/cube.js"></script>
+</body>
+</html>

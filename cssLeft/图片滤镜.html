@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>css实战</title>
+<style>
+.container:after {
+    content: '';
+    clear: both;
+}
+.img-container {
+    margin-right: 10px;
+    width: 200px;
+    height: 300px;
+    float: left;
+}
+.img-container img {
+    width: 200px;
+    height: 300px;
+}
+/* 高斯模糊 */
+.blur {
+    filter: blur(2px);
+}
+/* // 灰度 */
+.grayscale {
+    filter: grayscale(100%);
+}
+/* // 褐色 */
+.sepia {
+    filter: sepia(100%);
+}
+/* // 饱和度 */
+.saturate {
+    filter: saturate(5);
+}
+/* // 色相旋转 */
+.hue-rotate {
+    filter: hue-rotate(180deg);
+}
+/* // 反色 */
+.invert {
+    filter: invert(1);
+}
+/* // 透明度 */
+.opacity {
+    filter: opacity(.5);
+}
+/* // 亮度 */
+.brightness {
+    filter: brightness(3);
+}
+/* // 对比度 */
+.contrast {
+    filter: contrast(.5);
+}
+/* // 阴影 */
+.drop-shadow {
+    filter: drop-shadow(10px 10px 5px #000);
+}
+</style>
+</head> 
+<body>
+
+<div class="container">
+    <div class="img-container">
+        <img src="./img/demo.png" class="blur">    
+    </div>
+    <div class="img-container">
+        <img src="./img/demo.png" class="grayscale">    
+    </div>
+    <div class="img-container">
+        <img src="./img/demo.png" class="sepia">    
+    </div>
+    <div class="img-container">
+        <img src="./img/demo.png" class="saturate">    
+    </div>
+    <div class="img-container">
+        <img src="./img/demo.png" class="hue-rotate">    
+    </div>
+    <div class="img-container">
+        <img src="./img/demo.png" class="invert">    
+    </div>
+    <div class="img-container">
+        <img src="./img/demo.png" class="opacity">    
+    </div>
+    <div class="img-container">
+        <img src="./img/demo.png" class="brightness">    
+    </div>
+    <div class="img-container">
+        <img src="./img/demo.png" class="contrast">    
+    </div>
+    <div class="img-container">
+        <img src="./img/demo.png" class="drop-shadow">    
+    </div>
+</div>
+
+
+
+    
+<script src="./js/cube.js"></script>
+</body>
+</html>
